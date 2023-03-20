@@ -1,0 +1,167 @@
+Starting test run at Mon Mar 20 10:08:24 UTC 2023
+Go env
+GO111MODULE=""
+GOARCH="amd64"
+GOBIN=""
+GOCACHE="/root/.cache/go-build"
+GOENV="/root/.config/go/env"
+GOEXE=""
+GOEXPERIMENT=""
+GOFLAGS=""
+GOHOSTARCH="amd64"
+GOHOSTOS="linux"
+GOINSECURE=""
+GOMODCACHE="/go/pkg/mod"
+GONOPROXY=""
+GONOSUMDB=""
+GOOS="linux"
+GOPATH="/go"
+GOPRIVATE=""
+GOPROXY="https://proxy.golang.org,direct"
+GOROOT="/usr/local/go"
+GOSUMDB="sum.golang.org"
+GOTMPDIR=""
+GOTOOLDIR="/usr/local/go/pkg/tool/linux_amd64"
+GOVCS=""
+GOVERSION="go1.20.2"
+GCCGO="gccgo"
+GOAMD64="v1"
+AR="ar"
+CC="gcc"
+CXX="g++"
+CGO_ENABLED="0"
+GOMOD="/app/go.mod"
+GOWORK=""
+CGO_CFLAGS="-O2 -g"
+CGO_CPPFLAGS=""
+CGO_CXXFLAGS="-O2 -g"
+CGO_FFLAGS="-O2 -g"
+CGO_LDFLAGS="-O2 -g"
+PKG_CONFIG="pkg-config"
+GOGCCFLAGS="-fPIC -m64 -fno-caret-diagnostics -Qunused-arguments -Wl,--no-gc-sections -fmessage-length=0 -fdebug-prefix-map=/tmp/go-build288888723=/tmp/go-build -gno-record-gcc-switches"
+Running without CGO
+goos: linux
+goarch: amd64
+pkg: dockerBench
+cpu: AMD Ryzen 9 5900HX with Radeon Graphics        
+BenchmarkCompressGood
+BenchmarkCompressGood-16              	   41359	     28783 ns/op	    3713 B/op	       6 allocs/op
+BenchmarkCompressGood-16              	   41146	     32195 ns/op	    3714 B/op	       6 allocs/op
+BenchmarkCompressGood-16              	   41224	     29974 ns/op	    3713 B/op	       6 allocs/op
+BenchmarkCompressGood-16              	   39428	     28589 ns/op	    3713 B/op	       6 allocs/op
+BenchmarkCompressLog
+BenchmarkCompressLog-16               	      16	  67880733 ns/op	42367991 B/op	      40 allocs/op
+BenchmarkCompressLog-16               	      15	  72048152 ns/op	26542655 B/op	       5 allocs/op
+BenchmarkCompressLog-16               	      18	  67986139 ns/op	26542559 B/op	       5 allocs/op
+BenchmarkCompressLog-16               	      18	  63511410 ns/op	26542559 B/op	       5 allocs/op
+BenchmarkChaCha20Single
+BenchmarkChaCha20Single-16            	       1	3807498287 ns/op	1073741824 B/op	       1 allocs/op
+BenchmarkChaCha20Single-16            	       1	4358964474 ns/op	1073741920 B/op	       2 allocs/op
+BenchmarkChaCha20Single-16            	       1	2746004694 ns/op	1073741824 B/op	       1 allocs/op
+BenchmarkChaCha20Single-16            	       1	2884045545 ns/op	1073741832 B/op	       2 allocs/op
+BenchmarkChaCha20Threaded
+BenchmarkChaCha20Threaded-16          	       1	3262217452 ns/op	1073742352 B/op	       4 allocs/op
+BenchmarkChaCha20Threaded-16          	       1	2531480130 ns/op	1073742448 B/op	       5 allocs/op
+BenchmarkChaCha20Threaded-16          	       1	2669685750 ns/op	1073742448 B/op	       5 allocs/op
+BenchmarkChaCha20Threaded-16          	       1	3150642565 ns/op	1073742448 B/op	       5 allocs/op
+BenchmarkGenerateRandomBytes1Kb
+BenchmarkGenerateRandomBytes1Kb-16    	  234800	      5219 ns/op	    1024 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Kb-16    	  264775	      4951 ns/op	    1024 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Kb-16    	  298609	      3948 ns/op	    1024 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Kb-16    	  287991	      4466 ns/op	    1024 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Mb
+BenchmarkGenerateRandomBytes1Mb-16    	     366	   3018996 ns/op	 1048576 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Mb-16    	     331	   3715096 ns/op	 1048576 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Mb-16    	     399	   3491903 ns/op	 1048576 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Mb-16    	     363	   3216467 ns/op	 1048576 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Gb
+BenchmarkGenerateRandomBytes1Gb-16    	       1	3050290853 ns/op	1073741824 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Gb-16    	       1	2950786886 ns/op	1073741824 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Gb-16    	       1	2980048472 ns/op	1073741824 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Gb-16    	       1	3141845082 ns/op	1073741920 B/op	       2 allocs/op
+PASS
+ok  	dockerBench	89.751s
+Running with CGO
+goos: linux
+goarch: amd64
+pkg: dockerBench
+cpu: AMD Ryzen 9 5900HX with Radeon Graphics        
+BenchmarkCompressGood
+BenchmarkCompressGood-16              	   33076	     72421 ns/op	    3713 B/op	       6 allocs/op
+BenchmarkCompressGood-16              	   32286	     34130 ns/op	    3713 B/op	       6 allocs/op
+BenchmarkCompressGood-16              	   40288	     38631 ns/op	    3713 B/op	       6 allocs/op
+BenchmarkCompressGood-16              	   34983	     34665 ns/op	    3713 B/op	       6 allocs/op
+BenchmarkCompressLog
+BenchmarkCompressLog-16               	      15	  76971875 ns/op	43423052 B/op	      43 allocs/op
+BenchmarkCompressLog-16               	      18	  68177975 ns/op	26542559 B/op	       5 allocs/op
+BenchmarkCompressLog-16               	      14	  71858304 ns/op	26542696 B/op	       5 allocs/op
+BenchmarkCompressLog-16               	      16	  67860120 ns/op	26542619 B/op	       5 allocs/op
+BenchmarkChaCha20Single
+BenchmarkChaCha20Single-16            	       1	3589262904 ns/op	1073741824 B/op	       1 allocs/op
+BenchmarkChaCha20Single-16            	       1	3257816623 ns/op	1073741824 B/op	       1 allocs/op
+BenchmarkChaCha20Single-16            	       1	3248145159 ns/op	1073741832 B/op	       2 allocs/op
+BenchmarkChaCha20Single-16            	       1	2697659732 ns/op	1073741824 B/op	       1 allocs/op
+BenchmarkChaCha20Threaded
+BenchmarkChaCha20Threaded-16          	       1	2035631831 ns/op	1073742448 B/op	       5 allocs/op
+BenchmarkChaCha20Threaded-16          	       1	2598027084 ns/op	1073742448 B/op	       5 allocs/op
+BenchmarkChaCha20Threaded-16          	       1	2450186342 ns/op	1073741936 B/op	       3 allocs/op
+BenchmarkChaCha20Threaded-16          	       1	3229928753 ns/op	1073741936 B/op	       3 allocs/op
+BenchmarkGenerateRandomBytes1Kb
+BenchmarkGenerateRandomBytes1Kb-16    	  305601	      3606 ns/op	    1024 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Kb-16    	  341996	      3880 ns/op	    1024 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Kb-16    	  274765	      5121 ns/op	    1024 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Kb-16    	  280161	      4654 ns/op	    1024 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Mb
+BenchmarkGenerateRandomBytes1Mb-16    	     292	   3588131 ns/op	 1048576 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Mb-16    	     348	   3547728 ns/op	 1048576 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Mb-16    	     343	   3728780 ns/op	 1048576 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Mb-16    	     337	   3611122 ns/op	 1048576 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Gb
+BenchmarkGenerateRandomBytes1Gb-16    	       1	3131528668 ns/op	1073741824 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Gb-16    	       1	2956810101 ns/op	1073741824 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Gb-16    	       1	2969655024 ns/op	1073741920 B/op	       2 allocs/op
+BenchmarkGenerateRandomBytes1Gb-16    	       1	2885532987 ns/op	1073741824 B/op	       1 allocs/op
+PASS
+ok  	dockerBench	91.957s
+Running with opts
+goos: linux
+goarch: amd64
+pkg: dockerBench
+cpu: AMD Ryzen 9 5900HX with Radeon Graphics        
+BenchmarkCompressGood
+BenchmarkCompressGood-16              	   34107	     33836 ns/op	    3713 B/op	       6 allocs/op
+BenchmarkCompressGood-16              	   28027	     38831 ns/op	    3713 B/op	       6 allocs/op
+BenchmarkCompressGood-16              	   36060	     33554 ns/op	    3713 B/op	       6 allocs/op
+BenchmarkCompressGood-16              	   37260	     36240 ns/op	    3713 B/op	       6 allocs/op
+BenchmarkCompressLog
+BenchmarkCompressLog-16               	      18	  80820991 ns/op	26542559 B/op	       5 allocs/op
+BenchmarkCompressLog-16               	      13	  79683197 ns/op	26542411 B/op	       5 allocs/op
+BenchmarkCompressLog-16               	      16	  79661938 ns/op	26542619 B/op	       5 allocs/op
+BenchmarkCompressLog-16               	      18	  66790123 ns/op	26542564 B/op	       5 allocs/op
+BenchmarkChaCha20Single
+BenchmarkChaCha20Single-16            	       1	3927478389 ns/op	1073743776 B/op	       5 allocs/op
+BenchmarkChaCha20Single-16            	       1	2496339265 ns/op	1073741824 B/op	       1 allocs/op
+BenchmarkChaCha20Single-16            	       1	3034250712 ns/op	1073741832 B/op	       2 allocs/op
+BenchmarkChaCha20Single-16            	       1	2991499574 ns/op	1073741920 B/op	       2 allocs/op
+BenchmarkChaCha20Threaded
+BenchmarkChaCha20Threaded-16          	       1	2518236033 ns/op	1073742544 B/op	       6 allocs/op
+BenchmarkChaCha20Threaded-16          	       1	2539561326 ns/op	1073742448 B/op	       5 allocs/op
+BenchmarkChaCha20Threaded-16          	       1	2610059064 ns/op	1073741936 B/op	       3 allocs/op
+BenchmarkChaCha20Threaded-16          	       1	2737897682 ns/op	1073741936 B/op	       3 allocs/op
+BenchmarkGenerateRandomBytes1Kb
+BenchmarkGenerateRandomBytes1Kb-16    	  329452	      3617 ns/op	    1024 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Kb-16    	  308479	      3612 ns/op	    1024 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Kb-16    	  395055	      4039 ns/op	    1024 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Kb-16    	  344407	      4387 ns/op	    1024 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Mb
+BenchmarkGenerateRandomBytes1Mb-16    	     325	   3806625 ns/op	 1048576 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Mb-16    	     290	   3787769 ns/op	 1048576 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Mb-16    	     318	   3702281 ns/op	 1048576 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Mb-16    	     284	   3798712 ns/op	 1048576 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Gb
+BenchmarkGenerateRandomBytes1Gb-16    	       1	3574141009 ns/op	1073741920 B/op	       2 allocs/op
+BenchmarkGenerateRandomBytes1Gb-16    	       1	3293103832 ns/op	1073741824 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Gb-16    	       1	3278491603 ns/op	1073741824 B/op	       1 allocs/op
+BenchmarkGenerateRandomBytes1Gb-16    	       1	2953822332 ns/op	1073741824 B/op	       1 allocs/op
+PASS
+ok  	dockerBench	94.791s
